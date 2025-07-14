@@ -1,23 +1,22 @@
 ﻿using BabySound.Scripts;
-using SingleApp;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace BabySound
 {
-	public class IAPScreen : Singleton<IAPScreen>
-	{
-		[SerializeField] private BuyCoinButton[] _buttons;
+    using SingleApp;
 
-		void Start()
-		{
-			for(int i=0;i<_buttons.Length;i++)
-			{
-				_buttons[i].SetDataWithIndex();
-			}
+    public class IAPScreen : Singleton<IAPScreen>
+    {
+        [SerializeField] private BuyCoinButton[] _buttons;
 
-			gameObject.SetActive(false);
-		}
-	}
+        void Start()
+        {
+            for (int i = 0; i < _buttons.Length; i++)
+            {
+                _buttons[i].Index = i;
+            }
+        }
+    }
 }

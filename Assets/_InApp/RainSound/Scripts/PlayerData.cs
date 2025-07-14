@@ -15,7 +15,6 @@ public class PlayerData : BaseData
     public int crtMusicalIns;
     public bool[] listMusical;
     public bool isUnlock;
-    public bool removeAds;
 
     public long time;
     public string timeRegister;
@@ -127,12 +126,6 @@ public class PlayerData : BaseData
     public void UnlockPack()
     {
         isUnlock = true;
-        Save();
-    }
-    
-    public void RemoveAds()
-    {
-        removeAds = true;
         Save();
     }
 
